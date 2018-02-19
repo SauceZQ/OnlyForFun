@@ -1,0 +1,13 @@
+<!--pages/readHistory/readHistory.wxml-->
+<view class='header'>
+    <text>阅读历史</text>
+</view>
+<view class='read_history_list_view'>
+    <view bindtap='bindReadHistoryItem' data-item='{{item}}' wx:for='{{readHistoryList}}' class='read_history_item' wx:key='{{index}}'>
+        <view class='read_history_item_top'>
+            <text class='read_history_item_top_novelname'>《{{item.novelname}}》 </text>
+			<text class='read_history_item_top_time'>{{item.last_read_time}}</text>
+        </view>
+        <text class='read_history_item_chapter_title' decode='true'>&nbsp;{{item.chapter_name}}</text>
+    </view>
+</view>

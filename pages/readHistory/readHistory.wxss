@@ -1,0 +1,48 @@
+/* pages/readHistory/readHistory.wxss */
+
+.header{
+	height: 100rpx;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+}
+.read_history_list_view{
+	margin-top: 125rpx;
+	width: 100%;
+	min-height: 100rpx;
+	color: #fff
+}
+
+.read_history_item{
+	margin: 20rpx 10rpx;
+	padding-bottom: 10rpx;
+	border-bottom: 1rpx solid #dcdcdc;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.read_history_item_top{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10rpx;
+}
+
+.read_history_item_top_novelname{
+	flex-grow: 1;
+}
+
+.read_history_item_top_time{
+	font-size: 25rpx;
+	display: flex;
+	color: #dcdcdc
+}
+
+.read_history_item_chapter_title{
+	font-size: 30rpx;
+}

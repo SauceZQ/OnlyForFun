@@ -1,0 +1,13 @@
+/* pages/video/video.wxss */
+
+.video_class {
+    width: 100%;
+     margin-top: 30%; 
+}
+
+.myButton {
+    bottom: 30rpx;
+	left: 0;
+	right: 0;
+	position: absolute;
+}

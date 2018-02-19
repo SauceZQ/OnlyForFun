@@ -1,0 +1,44 @@
+{
+    "pages": [
+		"pages/bqw/bqw",		
+		"pages/searchResult/searchResult",		
+        "pages/readHistory/readHistory",
+        "pages/index/index",
+        "pages/video/video",
+        "pages/chapterList/chapterlist",
+        "pages/chapterDetail/chapterDetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#00abee",
+        "navigationBarTitleText": "OnlyForFun",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/bqw/bqw",
+                "text": "首页",
+                "iconPath": "pages/img/home.png",
+                "selectedIconPath": "pages/img/home_select.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "我的",
+                "iconPath": "pages/img/my.png",
+                "selectedIconPath": "pages/img/my_select.png"
+            }
+        ],
+        "color": "#000000",
+        "selectedColor": "#f00",
+        "backgroundColor": "#00a8e0",
+        "borderStyle": "black",
+        "position": "bottom"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <block >
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userIco}}" background-size="cover"></image>
+            <text class="userinfo-nickname">Hello {{userInfo.nickName}}!</text>
+        </block>
+    </view>
+    <view class='mune_list'>
+        <view class='mune_item' bindtap='bindReadHistory'>
+            <text>阅读历史</text>
+            <view class='mune_item_right'>></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,63 @@
+/* pages/chapterDetail/chapterDetail.wxss */
+
+page{
+	color: #000;
+}
+
+.top_menu{
+	height: 80rpx;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	align-items: center;
+	justify-content: space-between
+}
+
+.btn{
+	width: 150rpx;
+	height: 50rpx;
+	font-size: 30rpx;
+	border: 1px solid #dcdcdc;
+	border-radius: 4rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10rpx;
+}
+
+.temp{
+	width: 150rpx;
+	height: 50rpx;
+}
+
+.menu{
+	width: 150rpx;
+	height: 50rpx;
+	border: 1px solid #dcdcdc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30rpx;
+	border-radius: 5rpx
+}
+
+.title_view{
+	margin-top: 80rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100rpx;
+}
+
+.title{
+	margin-top: 20rpx;
+}
+
+.content_view{
+	margin: 10rpx 10rpx;
+	padding-bottom: 150rpx;
+}

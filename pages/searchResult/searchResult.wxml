@@ -1,0 +1,19 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class='header'>
+    <text>搜索结果</text>
+</view>
+<view class='search_result_list'>
+    <view class='search_result_item' wx:for='{{searchRusltList}}' wx:key='{{index}}' bindtap='bindChapterList' data-item='{{item}}'>
+        <view class='search_result_item_title'>
+            <text class='novelName'>《{{item.novelName}}》</text>
+            <text class='author'>状态: {{item.novelStatus}}</text>
+        </view>
+        <view class='search_result_item_content'>
+            <text catchtap='bindNewsChapter' data-item='{{item}}' class='news_chapter_content'>最新章节:<text class='news_chapter_title'>{{item.newsChapterTitle}}</text></text>
+            <view class='item_bottom' >
+                <text class='author item_bottom_update_time'>最近更新: {{item.updateTime}}</text>
+                <text class='author'>作者: {{item.author}}</text>
+            </view>
+        </view>
+    </view>
+</view>

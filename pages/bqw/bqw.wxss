@@ -1,0 +1,105 @@
+/* pages/bqw/bqw.wxss */
+
+page{
+	color: #fff
+}
+
+.body{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.search_view{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+.search_input{
+	width: 80%; 
+	margin: 0 auto;
+	height:80rpx;
+	border: 1px solid #fff;
+	text-align: center;
+	color: #000;
+	font-size: 30rpx;
+	border-radius: 10rpx;
+}
+.placeholder_style{
+	color:#fff
+}
+
+.search_button{
+	margin-left: 10rpx;
+	margin-right: 0;
+	margin-top: 80rpx;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30rpx;
+	width: 100px;
+}
+
+
+.history_view{
+	width: 80%; 
+	min-height: 250rpx;
+	max-height: 350rpx;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: rgba(0, 0, 0, 0.4);
+	margin-top: 15rpx;
+	border-radius: 10rpx;
+}
+
+.history_top_view{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 60rpx;
+	border-bottom: 1px solid #fff
+}
+.history_title{
+	font-size: 25rpx;
+	margin-left: 15rpx;
+	display: inline-block;	
+	flex-grow: 1
+}
+
+.clear_history{
+	font-size: 22rpx;
+	color: #999;	
+	/* border-bottom: 2rpx solid #dcdcdc; */
+	border: 1px solid #dcdcdc;
+	padding: 3rpx 8rpx;
+	border-radius: 6rpx;
+	margin-right: 10rpx;
+}
+
+.history_list{
+	display: flex;
+	width: 100%;
+	margin-top: 10rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	padding-bottom: 10rpx;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.search_text{
+	text-align: center;
+	font-size: 25rpx;
+	color: #fff;
+	margin: 5rpx 8rpx;
+	border-bottom: 1px solid #dcdcdc
+}

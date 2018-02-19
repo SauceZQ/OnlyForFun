@@ -1,0 +1,16 @@
+<!--pages/chapterDetail/chapterDetail.wxml-->
+<view>
+    <view class='top_menu' wx:if='{{data.chapterTitle}}'>
+		<view class='btn' bindtap='changePage' data-page-type='last' wx:if='{{hasLast}}'>上一章</view>
+		<view class='temp' wx:if='{{!hasLast}}'></view>
+		<view class='menu' bindtap='toMune'>目录</view>
+		<view class='btn' bindtap='changePage' data-page-type='next' wx:if='{{hasNext}}'>下一章</view>		
+		<view class='temp' wx:if='{{!hasNext}}'></view>		
+    </view>
+    <view class='title_view'>
+        <text class='title'>{{data.chapterTitle}}</text>
+    </view>
+    <view class='content_view'>
+        <text>{{data.content}}</text>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view class='body' style="background-image:url({{app}})">
+    <view class='search_view'>
+        <input class='search_input' bindconfirm='search' bindinput="bindKeyInput" placeholder='输入小说名全称' placeholder-class='placeholder_style' confirm-type='search' />
+        <view class='history_view' wx:if='{{searchHistoryArray.length>0}}'>
+            <view class='history_top_view' >
+                <view class='history_title'>历史搜索 :</view>
+				<view class='clear_history' bindtap='clearHistorySearch'>清空记录</view>
+            </view>
+            <view class='history_list'>
+                <view class='search_text' bindtap='search' data-search-name='{{item}}' wx:key='{{index}}' wx:for='{{searchHistoryArray}}'>《{{item}}》</view>
+            </view>
+        </view>
+        <button type='primary' bindtap='search' class='search_button'>搜索</button>
+    </view>
+</view>

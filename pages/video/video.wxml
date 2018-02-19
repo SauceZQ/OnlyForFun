@@ -1,0 +1,6 @@
+<view>
+    <video class="video_class" src="https://hz189cloud.oos-hz.ctyunapi.cn/a2838db0-1c42-4e5b-bae8-f229fb4b2e03?response-content-type=video/mp4&Expires=1518070873&response-content-disposition=attachment%3Bfilename%3D%22%C3%A9%C2%97%C2%AA%C3%A7%C2%94%C2%B5%C3%A4%C2%BE%C2%A0S04E13.mp4%22&AWSAccessKeyId=95e6d363b6e2475aeecc&Signature=eUhrIP9sVZ8Nvl%2B2BTVtxtXfRoo%3D"></video>
+	 <button class="myButton" bindlongtap="bindTap" type='primary'>播放</button> 
+	 <!-- <view wx:for='{{arr}}' wx:key='{{idx}}' wx:for-index='idx' wx:for-item='ite'>{{ite}},{{idx}}</view>  -->
+</view>
+
