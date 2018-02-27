@@ -7,9 +7,11 @@
         </block>
     </view>
     <view class='mune_list'>
-        <view class='mune_item' bindtap='bindReadHistory'>
-            <text>阅读历史</text>
-            <view class='mune_item_right'>></view>
-        </view>
+		<formIdBtn bind:bindsubmit='bindReadHistory' >
+        		<view class='mune_item' >
+            		<text>阅读历史</text>
+            		<view class='mune_item_right'>></view>
+        		</view>
+		</formIdBtn>
     </view>
 </view>

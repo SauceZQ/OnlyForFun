@@ -30,6 +30,7 @@ Page({
 	 * 跳转到章节详情
 	 */
 	bindReadHistoryItem:function(event){
+		app.saveFormId(event);
 		var item=event.currentTarget.dataset.item
 		wx.navigateTo({
 			url : '../chapterDetail/chapterDetail?detailUrl='+item.chapter_url,

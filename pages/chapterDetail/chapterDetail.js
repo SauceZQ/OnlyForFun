@@ -30,6 +30,7 @@ Page({
 	changePage: function (event) {
 		var pageType = event.currentTarget.dataset.pageType;
 		var url = '';
+		app.saveFormId(event);
 		switch (pageType) {
 			case 'last':
 				url = this.data.data.lastPageUrl;
@@ -51,6 +52,7 @@ Page({
 	 * 跳转到目录
 	 */
 	toMune: function (e) {
+		app.saveFormId(e);		
 		wx.navigateTo({
 			url: '../chapterList/chapterlist?novelName=' + this.data.data.novelName+'&novelUrl='+this.data.data.novelUrl,
 		})

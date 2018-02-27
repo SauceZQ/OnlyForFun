@@ -1,5 +1,6 @@
 // pages/chapterList/chapterlist.js
-var api = require("../../api/index.js")
+var api = require("../../api/index.js");
+var app=getApp();
 Page({
 
 	/**
@@ -21,6 +22,7 @@ Page({
 	 * 跳转章节详情
 	 */
 	bindChapterTap: function (event) {
+		app.saveFormId(event);
 		var item = event.currentTarget.dataset.item
 		wx.navigateTo({
 			// url: '../chapterDetail/chapterDetail?item=' + JSON.stringify(item),
@@ -66,6 +68,7 @@ Page({
 	 * 
 	 */
 	changePage: function (event) {
+		app.saveFormId(event);
 		var pageType = event.currentTarget.dataset.pageType;
 		switch (pageType) {
 			case 'next':

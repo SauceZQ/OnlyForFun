@@ -17,9 +17,12 @@ Page({
 		})
 
 	},
+	
 	//搜索按钮 
 	search: function (e) {
-		var historySearchName = e.currentTarget.dataset.searchName
+		console.log("搜索=",e)
+		app.saveFormId(e);
+		var historySearchName = e.currentTarget.dataset.searchName;
 		if (this.data.search_name.trim() == '' && historySearchName == undefined) {
 			wx.showToast({
 				title: '请输入小说名',
@@ -55,7 +58,8 @@ Page({
 	/***
 	 * 清空搜索记录
 	 */
-	clearHistorySearch: function () {
+	clearHistorySearch: function (e) {
+		app.saveFormId(e)
 		try{
 			wx.removeStorageSync(storageKey);
 			this.setData({

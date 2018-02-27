@@ -1,6 +1,6 @@
 // pages/searchResult/searchResult.js
-var api = require('../../api/index.js')
-
+var api = require('../../api/index.js');
+var app=getApp();
 Page({
 
 	/**
@@ -24,6 +24,7 @@ Page({
 	 * 跳转到章节列表
 	 */
 	bindChapterList:function(event){
+		app.saveFormId(event);
 		var item = event.currentTarget.dataset.item;		
 		wx.navigateTo({
 			url: '../chapterList/chapterlist?novelUrl=' + item.novelUrl +'&novelName='+item.novelName,

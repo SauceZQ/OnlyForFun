@@ -21,7 +21,7 @@
 .read_history_item{
 	margin: 20rpx 10rpx;
 	padding-bottom: 10rpx;
-	border-bottom: 1rpx solid #dcdcdc;
+	border-bottom: 1rpx solid #dcdcdc!important;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -40,7 +40,7 @@
 .read_history_item_top_time{
 	font-size: 25rpx;
 	display: flex;
-	color: #dcdcdc
+	color: #dcdcdc!important
 }
 
 .read_history_item_chapter_title{

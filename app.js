@@ -70,6 +70,18 @@ App({
 		wx.setStorageSync('logs', logs);
 		
 	},
+
+	//保存formid
+	saveFormId: function (e) {
+		var formId = e.detail.formId;
+		var openid = this.globalData.openid
+		if (openid == '' || openid == undefined) {
+			this.doLogoin();
+			// 这里没有openid 则获取一次，但是获取过程是异步的，所以这一次 formid 则不用保存了
+			return;
+		}
+		api.saveFormId(openid, formId)
+	},
 	
 	globalData: {
 		userInfo: null,

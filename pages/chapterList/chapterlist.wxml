@@ -3,25 +3,30 @@
     <scroll-view class='scroll_view'>
         <view class='title' wx:if="{{novelName}}">
             <text class='title_text'>《{{novelName}}》</text>
-            <text bindtap='changePage' data-page-type='orderBy' class='order_by'>{{orderBy==1?'「倒序」':'「正序」'}}</text>
+			<formIdBtn class='order_by' bind:bindsubmit='changePage' data-page-type='orderBy'>
+            	<text style='color:#fff;'>{{orderBy==1?'「倒序」':'「正序」'}}</text>
+			</formIdBtn>
         </view>
         <view class='chapter_list'>
-            <view data-item='{{item}}' bindtap='bindChapterTap' class='chapter_item' wx:for='{{chapterList}}' wx:key='{{index}}'>
-                <text>{{item.title}}</text>
-            </view>
+			<formIdBtn  wx:for='{{chapterList}}' wx:key='{{index}}' data-item='{{item}}'  bind:bindsubmit='bindChapterTap' >
+					<view class='chapter_item'>
+    	            	<text>{{item.title}}</text>
+        	    	</view>
+			</formIdBtn>
         </view>
     </scroll-view>
     <view class='bottom_view' wx:if="{{totalPage>=1}}">
-        <view class='button_view' bindtap='changePage' data-page-type='last' wx:if='{{page>=1}}'>上一页</view>
+		<formIdBtn  bind:bindsubmit='changePage'  data-page-type='last' wx:if='{{page>=1}}'>
+				<view class='button_view' >上一页</view>
+		</formIdBtn>
 		<view class='button_temp' wx:if='{{page<1}}'></view>
-        <!-- <button size='mini'>上一页</button> -->
-        <!-- <view class='picker_view'> -->
         <picker class='picker_view' bindchange="bindPickerChange" value="{{page}}" range="{{pageArray}}">
             <view>{{pageArray[page]}}</view>
-            <!-- <image src='../img/sanjiaoxia.png'></image> -->
         </picker>
         <!-- </view> -->
-        <view class='button_view' bindtap='changePage' data-page-type='next' wx:if='{{page<totalPage-1}}'>下一页</view>
+		<formIdBtn  bind:bindsubmit='changePage'   data-page-type='next' wx:if='{{page<totalPage-1}}'>
+       	 	<view class='button_view' >下一页</view>
+		</formIdBtn>
 		<view class='button_temp' wx:if='{{page>=totalPage-1}}'></view>
     </view>
 </view>

@@ -36,6 +36,7 @@ page{
 	color:#fff
 }
 
+
 .search_button{
 	margin-left: 10rpx;
 	margin-right: 0;
@@ -84,6 +85,8 @@ page{
 	border-radius: 6rpx;
 	margin-right: 10rpx;
 }
+
+
 
 .history_list{
 	display: flex;

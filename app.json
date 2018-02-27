@@ -1,7 +1,7 @@
 {
     "pages": [
-		"pages/bqw/bqw",		
-		"pages/searchResult/searchResult",		
+        "pages/bqw/bqw",
+        "pages/searchResult/searchResult",
         "pages/readHistory/readHistory",
         "pages/index/index",
         "pages/video/video",
@@ -20,6 +20,12 @@
             {
                 "pagePath": "pages/bqw/bqw",
                 "text": "首页",
+                "iconPath": "pages/img/home.png",
+                "selectedIconPath": "pages/img/home_select.png"
+            },
+            {
+                "pagePath": "pages/video/video",
+                "text": "视频",
                 "iconPath": "pages/img/home.png",
                 "selectedIconPath": "pages/img/home_select.png"
             },

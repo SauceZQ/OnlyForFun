@@ -20,8 +20,8 @@
 
 .search_result_item {
     border-radius: 5px;
-    margin: 40rpx 15rpx;
-    padding: 10rpx 10rpx;
+    margin: 35rpx 30rpx;
+    padding: 30rpx 10rpx;
     color: #fff;
 	background: rgba(0, 0, 0, 0.4);
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);

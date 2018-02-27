@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
 	data: {
 		motto: '',
@@ -44,6 +43,7 @@ Page({
 	 * 阅读历史记录
 	 */
 	bindReadHistory: function (event) {
+		app.saveFormId(event);
 		wx.navigateTo({
 			url: '../readHistory/readHistory',
 		})

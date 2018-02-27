@@ -1,8 +1,9 @@
 // pages/video/video.js
+var app=getApp()
 Page({
 
-	bindTap:function(){
-		console.log("sss")
+	bindTap:function(e){
+		app.saveFormId(e)
 	},
 
   /**

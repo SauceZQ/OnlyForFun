@@ -2,22 +2,23 @@
  * 网络请求
  */
 
-var host = 'https://www.sauce1024.com/'
-// var host = 'http://127.0.0.1:9000/'
+var host = 'https://www.sauce1024.com/';
+// var host = 'http://127.0.0.1:9000/';
 
 // 搜索接口
-var search_url = host + 'bqwapi/search/'
+var search_url = host + 'bqwapi/search/';
 //获取章节列表接口
-var get_chapter_list_url = host + 'bqwapi/chapterlist'
+var get_chapter_list_url = host + 'bqwapi/chapterlist';
 // 获取详情接口
-var detail_url = host + 'bqwapi/getDetail'
+var detail_url = host + 'bqwapi/getDetail';
 // 保存阅读记录接口
-var save_read_history_url = host + 'bqwapi/readHistory'
+var save_read_history_url = host + 'bqwapi/readHistory';
 // 获取阅读记录接口
-var get_read_history_url = host + 'bqwapi/readHistory'
-//获取openid接口
-var get_openid_url = host + 'bqwapi/wxauthorization'
-
+var get_read_history_url = host + 'bqwapi/readHistory';
+//获取 openid 接口
+var get_openid_url = host + 'bqwapi/wxauthorization';
+// 保存 form_id 接口
+var save_wx_formid_url = host +'bqwapi/formId';
 
 // 搜索方法
 var search = function (searchKey,callback) {
@@ -157,7 +158,6 @@ var getReadHistory = function (openid, callback) {
 	})
 }
 
-
 // 获取openid
 var getOpenId = function (jsCode, callback) {
 	wx.request({
@@ -186,6 +186,26 @@ var getOpenId = function (jsCode, callback) {
 	})
 }
 
+// 保存 form_id
+// 不用 回调，保存成功与否不重要
+var saveFormId=function(openId,formId){
+	wx.request({
+		url: save_wx_formid_url,
+		method:'POST',
+		data:{
+			'openId':openId,
+			'formId':formId,
+		},
+		success:res=>{
+			if(res.data.error_code==0){
+				console.log("保存 formId 成功！", res)
+			}else{
+				console.log("保存 formId 失败!", res)				
+			}
+		}
+	})
+}
+
 //test
 var test = function (params, callback) {
 	var testurl = host + 'api/authenticate'
@@ -208,5 +228,6 @@ module.exports = {
 	saveReadHistory: saveReadHistory,
 	getReadHistory: getReadHistory,
 	getOpenId: getOpenId,
+	saveFormId: saveFormId,
 	test: test,
 };
